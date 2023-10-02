@@ -10,7 +10,7 @@ export default function BlockTime() {
             <p className={cls.headerItem}>Дата</p>
         </div>
         <div className={cls.con}>
-          
+          <img src="/images/date" alt="" />
 
         </div>
     </div>
