@@ -1,5 +1,5 @@
-import BlockTime from "../components/BlockTime/BlockTime";
 import "./App.scss";
+import BlockTime from './../components/BlockTime/BlockTime';
 
 function App() {
     return (
