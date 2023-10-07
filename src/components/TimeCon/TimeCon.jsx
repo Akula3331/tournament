@@ -6,14 +6,14 @@ export default function TimeCon({ onFirstDateFromChild }) {
   const initialData = [
     { img: "/icons/gamecontroller.svg", 
     dis: "BLUR", 
-    data: "07.10.2023",
+    data: "09.10.2023",
     pNum:['Gorbatic', 'pol','koi','jio'] },
   
     { img: "/icons/dice.svg", dis: "Дурак", data: "09.10.2023" },
     { img: "/icons/dumbbell.svg", dis: "Шахматы", data: "10.10.2023" },
   ];
 
-  // 'Gorbatic', 'Betito','koi','jio' Никнеймы
+  // 'Gorbatic', 'Betito','CFKN','' Никнеймы
 
   const [firstData, setFirstData] = useState(
     initialData.length > 0 ? initialData[0].data : null
