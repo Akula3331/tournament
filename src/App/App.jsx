@@ -1,11 +1,10 @@
 import "./App.scss";
-import BlockTime from './../components/BlockTime/BlockTime';
+import TourList from "../components/TourList/TourList";
 
 function App() {
     return (
         <div className="App">
-            <h1>Hello World!</h1>
-            <BlockTime/>
+            <TourList />
         </div>
     );
 }
