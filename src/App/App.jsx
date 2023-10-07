@@ -1,34 +1,26 @@
-import "./App.scss";
-import Card from "../components/Card/Card";
-import TimeCon from "../components/TimeCon/TimeCon";
-import CountdownTimer from "../components/CountdownTimer/CountdownTimer";
+import { Route, Routes } from "react-router";
+import cls from "./App.module.scss";
 import { useState } from "react";
-import BlockTime from "../components/BlockTime/BlockTime";
-import TourList from "../components/TourList/TourList";
+import MainPage from "../pages/MainPage/MainPage";
+import ProfilePage from "../pages/ProfilePage/ProfilePage";
+import { Link } from "react-router-dom";
 
 function App() {
-    const [firstDateFromChild, setFirstDateFromChild] = useState(null);
-    const handleFirstDateFromChild = (date) => {
-        setFirstDateFromChild(date);
-    };
-    console.log(firstDateFromChild);
-    let targetDate = null; // Изначально установите targetDate как null
-
-    if (firstDateFromChild) {
-        const dateParts = firstDateFromChild.split(".");
-        if (dateParts.length === 3) {
-            const formattedDate = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}T00:00:00`;
-            targetDate = new Date(formattedDate);
-        }
-    }
-
     return (
-        <div className="App">
-            <h1>Hello World!</h1>
-            <TimeCon onFirstDateFromChild={handleFirstDateFromChild} />
-            <TourList />
-            <CountdownTimer targetDate={targetDate} />
-        </div>
+        <>
+            <header className={cls.header}>
+                <nav className={cls.navbar}>
+                    <Link to="/">Main</Link>
+                    <Link to="/profile">Profile</Link>
+                </nav>
+            </header>
+            <div className={cls.App}>
+                <Routes>
+                    <Route path="/" element={<MainPage />} />
+                    <Route path="/profile" element={<ProfilePage />} />
+                </Routes>
+            </div>
+        </>
     );
 }
 
