@@ -26,7 +26,7 @@ function App() {
         <div className="App">
             <h1>Hello World!</h1>
             <TimeCon onFirstDateFromChild={handleFirstDateFromChild} />
-            <TourList />
+            {/* <TourList /> */}
             <CountdownTimer targetDate={targetDate} />
         </div>
     );
