@@ -1,3 +1,6 @@
+.TourList {
+    padding: 15px 0;
+}
 .head {
     background-color: #3b3b3b;
     display: flex;
@@ -5,10 +8,11 @@
     align-items: center;
     flex-wrap: wrap;
     column-gap: 20px;
+    padding: 5px 0;
 }
 .icon {
-    width: 100px;
-    height: 100px;
+    width: 6vw;
+    height: 6vw;
     img {
         width: 100%;
     }
@@ -16,18 +20,17 @@
 .title {
     color: #ffa233;
     font-family: Lora;
-    font-size: 60px;
+    font-size: 4vw;
     font-weight: 600;
 }
 .table {
     width: 100%;
-    height: 100%;
     background: url("../../../public/images/reibg.jpg");
     background-size: cover;
     background-position: center;
     display: grid;
     grid-template-columns: minmax(100px, 300px) 1fr minmax(100px, 300px);
-    grid-template-rows: repeat(5, 1fr);
+    // grid-template-rows: repeat(5, 1fr);
     li {
         color: #fff;
         text-align: center;
@@ -36,6 +39,9 @@
         justify-content: center;
         align-items: center;
         font-size: 24px;
+        img {
+            width: 50%;
+        }
     }
 }
 .tableName {

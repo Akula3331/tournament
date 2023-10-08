@@ -2,7 +2,7 @@ import React from "react";
 import cls from "./TourList.module.scss";
 export default function TourList() {
     return (
-        <div>
+        <div className={cls.TourList}>
             <div className={cls.head}>
                 <div className={cls.icon}>
                     <img src="/icons/cup.svg" alt="" />
