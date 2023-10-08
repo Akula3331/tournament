@@ -1,9 +1,38 @@
 .txt{
-font-size: 100px;
+// font-size: 24px;
 color: #FAED26;
 font-family: "Stick", sans-serif;
 }
 .con{
-    font-size: 100px;
     color: #FAED26;
+    width: 100%;
+    background-color: #423F46;
+    border-radius: 10px;
+   
+}
+.txtCon{
+    font-size: 24px;
+    
+}
+.conTime{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 20px;
+}
+.title{
+    color: #FAED26;
+    font-size: 18px;
+    font-family: "Lora", serif;
+}
+@media screen and (max-width:700px) {
+    .conTime{
+        gap: 10px;
+    }
+    
+}
+@media screen and (max-width:400px) {
+
+    
 }

@@ -4,19 +4,19 @@ import BlockTime from "../BlockTime/BlockTime";
 
 export default function TimeCon({ onFirstDateFromChild }) {
   const initialData = [
-    { img: "/icons/gamecontroller.svg", 
-    dis: "BLUR", 
-    data: "09.10.2023",
-    pNum:['Gorbatic', 'Betito','CFKN','Kalamburger'] },
+    { img: "/icons/cards.svg", 
+    dis: "Покер", 
+    data: "12.10.2023",
+    },
   
-    { img: "/icons/dice.svg", dis: "Дурак", data: "09.10.2023" },
-    { img: "/icons/dumbbell.svg", dis: "Шахматы", data: "10.10.2023",
+    { img: "/icons/cards.svg", dis: "UNO", data: "15.10.2023" },
+    { img: "/icons/dice.svg", dis: "Шашки", data: "18.10.2023",
     pNum:['Gorbatic', 'Betito','CFKN','Kalamburger'] },
   ];
 
   // 'Gorbatic', 'Betito','CFKN','Kalamburger' Никнеймы
 
-  const [firstData, setFirstData] = useState(
+  const [firstData] = useState(
     initialData.length > 0 ? initialData[0].data : null
   );
 
@@ -45,6 +45,11 @@ export default function TimeCon({ onFirstDateFromChild }) {
 
     setContainerStates(newContainerStates);
   };
+  const bgStyles ={
+    background:'url(/images/datebg.jpg)',
+    backgroundPosition: 'center center', // Картинка будет выровнена по центру горизонтально и вертикально
+    backgroundSize: 'cover',
+  }
   return (
     <div>
       <div className={cls.header}>
@@ -52,8 +57,8 @@ export default function TimeCon({ onFirstDateFromChild }) {
         <p className={cls.headerItem}>Дисциплина</p>
         <p className={cls.headerItem}>Дата</p>
       </div>
-      <div className={cls.con}>
-        <img className={cls.bg} src="/images/datebg.jpg" alt="" />
+      <div className={cls.con} style={bgStyles}>
+        {/* <img className={cls.bg} src="/images/datebg.jpg" alt="" /> */}
         {initialData.map((item, index) => (
           <BlockTime
             key={index}

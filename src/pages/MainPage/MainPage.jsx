@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import TimeCon from "./../../components/TimeCon/TimeCon";
-import CardsBlock from "./../../components/CardsBlock/CardsBlock";
-import TourList from "./../../components/TourList/TourList";
 import CountdownTimer from "./../../components/CountdownTimer/CountdownTimer";
+import cls from "./MainPage.module.scss"
 
 export default function MainPage() {
     const [firstDateFromChild, setFirstDateFromChild] = useState(null);
@@ -22,10 +21,14 @@ export default function MainPage() {
 
     return (
         <div>
-            <TimeCon onFirstDateFromChild={handleFirstDateFromChild} />
-            <CardsBlock />
-            <TourList />
+            <div className={cls.con}>
             <CountdownTimer targetDate={targetDate} />
+            <TimeCon onFirstDateFromChild={handleFirstDateFromChild} />
+            </div>
+
+            {/* <CardsBlock /> */}
+            {/* <TourList /> */}
+            
         </div>
     );
 }

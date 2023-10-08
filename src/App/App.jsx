@@ -6,18 +6,20 @@ import ProfilePage from "../pages/ProfilePage/ProfilePage";
 import { Link } from "react-router-dom";
 
 function App() {
+    
     return (
         <>
-            <header className={cls.header}>
+            {/* <header className={cls.header}>
                 <nav className={cls.navbar}>
                     <Link to="/">Main</Link>
                     <Link to="/profile">Profile</Link>
                 </nav>
-            </header>
+            </header> */}
             <div className={cls.App}>
                 <Routes>
+                    
                     <Route path="/" element={<MainPage />} />
-                    <Route path="/profile" element={<ProfilePage />} />
+                    {/* <Route path="/profile" element={<ProfilePage />} /> */}
                 </Routes>
             </div>
         </>
